@@ -1,0 +1,2 @@
+data/*.pth filter=lfs diff=lfs merge=lfs -text
+data/mask_rcnn_final_model.pth filter=lfs diff=lfs merge=lfs -text
