@@ -1,6 +1,6 @@
 # Mask-RCNN inference code and metrics calculation code for MIDL 
 
-This repository contains scripts for performing nuclei segmentation using Detectron2, followed by metric calculations including F1 scores based on GeoJSON format results. This code is part of the submission to the Medical Imaging with Deep Learning (MIDL) conference.
+This repository contains scripts for performing inference nuclei segmentation using Detectron2, followed by metric calculations including F1 scores based on GeoJSON format results. This code is part of the submission to the Medical Imaging with Deep Learning (MIDL) conference.
 
 ## Set Up Environment
 
