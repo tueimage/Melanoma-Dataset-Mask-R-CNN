@@ -29,5 +29,5 @@ python mask_rcnn_inference.py /path/to/images /path/to/output /path/to/model_wei
 2. `MIDL_calculate_f1_score.py`: Processes the GeoJSON output from the first script to calculate precision, recall and $F1$ scores per class. In addition micro and macro $F1$ score are calculated. Also usable for inference on NN192 geojsons and hovernet geojsons. 
 
 ```
-python process_geojson.py /path/to/ground_truth_folder /path/to/prediction_folder
+MIDL_calculate_f1_score.py /path/to/ground_truth_folder /path/to/prediction_folder
 ```
