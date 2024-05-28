@@ -130,6 +130,7 @@ def calculate_centroid_distance(dict_ground_truth, dict_pred):
                             'pred_category': pred_feature['category'],
                             'distance': distance,
                             'pred_score': pred_feature['score'],
+                            'pred_feature': pred_feature,
                         })
             
             # Sort the eligible predictions first by descending pred_score, then by ascending distance
@@ -139,6 +140,10 @@ def calculate_centroid_distance(dict_ground_truth, dict_pred):
             if eligible_predictions:
                 best_match = eligible_predictions[0]  # The best match for this gt_feature
                 results_dict[gt_geojson].append(best_match)
+
+                # Remove the best match from the pred_structure to avoid duplicate matches
+                pred_structure[match_key].remove(best_match['pred_feature'])
+
     
     return results_dict
 
@@ -240,4 +245,4 @@ if __name__ == "__main__":
     print(metrics_mask_rcnn)
 
 # To run the script, use the following command:
-# python process_geojson.py /path/to/ground_truth_folder /path/to/prediction_folder
+# python MIDL_calculate_f1_score.py /path/to/ground_truth_folder /path/to/prediction_folder
